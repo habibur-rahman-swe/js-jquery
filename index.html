@@ -8,13 +8,11 @@
     
     <script>
         $(document).ready(function() {
-            $("#start").click(function() {
-                $("#square").animate({left: '800px'}, 3300);
-            })
-
-            $("#stop").click(function() {
-                $("#square").stop();
-            })
+            $("button").click(function() {
+                $("#square").css("background", "red")
+                .slideUp(2000)
+                .slideDown(200)
+             })
         })
     </script>
     
@@ -29,8 +27,8 @@
     </style>
 </head>
 <body>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>    
+    <button>Animate</button>   
+
     <div id="square"></div>
 </body>
 </html>
