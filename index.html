@@ -8,31 +8,29 @@
     
     <script>
         $(document).ready(function() {
-            $("#topbar").click(function() {
-                $("#panel").toggle(1000);
+            $("#start").click(function() {
+                $("#square").animate({left: '800px'}, 3300);
+            })
+
+            $("#stop").click(function() {
+                $("#square").stop();
             })
         })
     </script>
     
     <style>
-        #topbar {
-            cursor: pointer;
-        }
-        #panel, #topbar {
-            padding: 5px;
-            text-align: center;
-            background-color: yellow;
-            border: solid 1px black;
-        }
-
-        #panel {
-            padding: 80px;
-            display: block;
+        #square {
+            background: blue;
+            height: 160px;
+            width: 160px;
+            margin-top: 5px;
+            position: absolute;
         }
     </style>
 </head>
 <body>
-    <div id="topbar">View Panel</div>
-    <div id="panel">This is a Panel with sample content</div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>    
+    <div id="square"></div>
 </body>
 </html>
