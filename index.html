@@ -5,30 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample JavaScript</title>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script>
-        $(document).ready(function() {
-            $("button").click(function() {
-                $("#square").css("background", "red")
-                .slideUp(2000)
-                .slideDown(200)
-             })
+       $(document).ready(function() {
+        $(function() {
+            $("#drag").draggable();
         })
+       })
     </script>
     
     <style>
-        #square {
+        #drag {
+            width: 150px;
+            height: 150px;
             background: blue;
-            height: 160px;
-            width: 160px;
-            margin-top: 5px;
-            position: absolute;
         }
     </style>
 </head>
 <body>
-    <button>Animate</button>   
-
-    <div id="square"></div>
+    <div id="drag"></div>
 </body>
 </html>
