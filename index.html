@@ -10,8 +10,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script>
        $(document).ready(function() {
-        $(function() {
-            $("#accordion").accordion();
+        $("#btn1").click(function() {
+            $("#text1").text("New Text Line");
+        })
+        $("#btn2").click(function() {
+            $("#text2").html("<h2>Bold Text Line</h2>");
+        })
+        $("#btn3").click(function() {
+            $("#name").val("Hello Bhai");
         })
        })
     </script>
@@ -21,15 +27,13 @@
     </style>
 </head>
 <body>
-    <div id="accordion">
-        <div>Heading 1</div>
-        <div>Paragraph 1</div>
+    <p id="text1"></p>
+    <p id="text2"></p>
 
-        <div>Heading 2</div>
-        <div>Paragraph 2</div>
+    <p>Name: <input type="text" id="name" value="Habibullah Habib"></p>
 
-        <div>Heading 3</div>
-        <div>Paragraph 3</div>
-    </div>
+    <button id="btn1">Reset Text</button>
+    <button id="btn2">Reset HTML</button>
+    <button id="btn3">Reset Value</button>
 </body>
 </html>
