@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample JavaScript</title>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $("#topbar").click(function() {
+                $("#panel").toggle(1000);
+            })
+        })
+    </script>
+    
     <style>
-        .box {
-            width: 160px;
-            height: 160px;
-            background-color: red;
+        #topbar {
+            cursor: pointer;
+        }
+        #panel, #topbar {
+            padding: 5px;
+            text-align: center;
+            background-color: yellow;
+            border: solid 1px black;
+        }
+
+        #panel {
+            padding: 80px;
+            display: block;
         }
     </style>
 </head>
 <body>
-    <button>Fade Effect</button> <br>
-
-    <div id="div1" class="box"></div>
-    <div id="div2" class="box"></div>
-    <div id="div3" class="box"></div>
-    <div id="div4" class="box"></div>
-
-    <script src="scripts.js"></script>
+    <div id="topbar">View Panel</div>
+    <div id="panel">This is a Panel with sample content</div>
 </body>
 </html>
